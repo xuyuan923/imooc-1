@@ -5,7 +5,7 @@ $(function () {
         var tr = $('.item-id-'+id);
         $.ajax({
             //注意，ajax type可以是delete?其它 HTTP 请求方法，如 PUT 和 DELETE 也可以使用，但仅部分浏览器支持。
-            type: 'DELETE',
+            type: 'POST',
             url: "/admin/list?id=" +id
         })
             .done(function (results) {

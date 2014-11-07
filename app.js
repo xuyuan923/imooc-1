@@ -121,7 +121,8 @@ app.get('/admin/list', function (req, res) {
 
 //list delete movie
 //express方法里有app.delete方法？
-app.delete('/admin/list',function(req,res){
+//delete/put方法都是post的马甲
+app.post('/admin/list',function(req,res){
     var id = req.query.id;
     if(id){
         Movie.remove({_id: id},function(err,movie){
